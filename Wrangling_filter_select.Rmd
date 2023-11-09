@@ -255,6 +255,7 @@ movies %>%
   filter(votes >= 100 & (Comedy== 1| Animation==1)) %>%
   select(title, budget, votes) %>%
   arrange (desc(budget))
+
 ```
 
 The highest budget for a comedy or animation with at least 100 votes is 170000000. The movie is Wild Wild West. Wild Wild West is a comedy. 
@@ -262,10 +263,13 @@ The highest budget for a comedy or animation with at least 100 votes is 17000000
 
 5. Is your favorite movie in the dataset? What other questions could you ask or answer using `filter()`, `select()`, and `arrange()`?
 
+# Check if the movie "Annie" is in the dataset
+
 ```{r}
-
+movies_2014 <- movies %>%    
+  filter(year == 2014)
+movies_2014         
 ```
-
 
 
 
